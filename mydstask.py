@@ -17,8 +17,8 @@ my_ds[3][2]['amount']=90
 print(my_ds)
 
 
-# 5. Reverse 987 to 789 without using an inbuilt -method or Assigning 789 manually.
-#  Hint: Strings can be reversed using [::]
+# Reverse 987 to 789 without using an inbuilt -method or Assigning 789 manually.
+# Hint: Strings can be reversed using [::]
 # find the index of 987
 # convert into a string
 my_ds[4]=str(my_ds[4])

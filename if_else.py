@@ -50,5 +50,3 @@ if score > 90:
         print('Good score, but attendance needs improvement')
 else:
     print('Good score, but attendance needs improvement')
-
-

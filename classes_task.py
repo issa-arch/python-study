@@ -110,3 +110,77 @@ print(f"Rectangle 1: Area = {rectangle1.area()}, Perimeter = {rectangle1.perimet
 print(f"Rectangle 2: Area = {rectangle2.area()}, Perimeter = {rectangle2.perimeter()}")
 print(f"Rectangle 3: Area = {rectangle3.area()}, Perimeter = {rectangle3.perimeter()}")
 
+# .Define a class Rectangle with attributes width and height.Add methods area and perimeter to calculate the area and perimeter of the rectangle.
+# Instantiate a few rectangle objects and print their area and perimeter.
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    # Method to calculate the area
+    def area(self):
+        return self.width * self.height
+
+    # Method to calculate the perimeter
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+# Instantiate a few Rectangle objects
+rectangle1 = Rectangle(4, 5)
+rectangle2 = Rectangle(7, 3)
+rectangle3 = Rectangle(6, 6)
+
+# Print the area and perimeter of each rectangle
+print(f"Rectangle 1: Area = {rectangle1.area()}, Perimeter = {rectangle1.perimeter()}")
+print(f"Rectangle 2: Area = {rectangle2.area()}, Perimeter = {rectangle2.perimeter()}")
+print(f"Rectangle 3: Area = {rectangle3.area()}, Perimeter = {rectangle3.perimeter()}")
+
+# Create a class Employee with attributes name and salary.Add a method give_raise that increases the salary by a given percentage.
+# Instantiate an employee, give them a raise, and display their new salary.
+class Employee:
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+    def give_raise(self,percentage):
+        self.salary+=self.salary*(percentage/100)
+        return self.salary
+employee1=Employee('kevin',10000)
+print(f'{employee1.name} new salary is {employee1.salary}')
+employee1.give_raise(30)
+print(f'{employee1.name} new salary is {employee1.salary}')
+
+
+# 3.Create a base class Vehicle with attributes brand and model.
+# Create two subclasses Car and Motorcycle that inherit from Vehicle and add unique methods to each subclass (e.g., honk for Car and rev_engine for Motorcycle).
+# Instantiate both subclasses and call their methods.
+
+
+# Base class
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def display_info(self):
+        print(f"Brand: {self.brand}, Model: {self.model}")
+
+# Subclass Car
+class Car(Vehicle):
+    def honk(self):
+        print(f"{self.brand} {self.model} says: Honk! Honk!")
+
+# Subclass Motorcycle
+class Motorcycle(Vehicle):
+    def rev_engine(self):
+        print(f"{self.brand} {self.model} engine revs: Vroom! Vroom!")
+
+# Instantiate Car and Motorcycle
+my_car = Car("Toyota", "Corolla")
+my_motorcycle = Motorcycle("Harley-Davidson", "Sportster")
+
+# Call methods
+my_car.display_info()
+my_car.honk()
+
+my_motorcycle.display_info()
+my_motorcycle.rev_engine()
